@@ -1,18 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31019.35
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentAdb", "FluentAdb\FluentAdb.csproj", "{5C52C949-76B5-4490-B2FA-2B9BB029EAA1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentAdb.Tests", "FluentAdb.Tests\FluentAdb.Tests.csproj", "{4CA93F37-063D-4A48-8B2F-8F5CA9CB1A3F}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{8D802FC0-6795-4FE0-A079-E3653146CC41}"
-	ProjectSection(SolutionItems) = preProject
-		.nuget\NuGet.Config = .nuget\NuGet.Config
-		.nuget\NuGet.exe = .nuget\NuGet.exe
-		.nuget\NuGet.targets = .nuget\NuGet.targets
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentAdb.Sample", "FluentAdb.Sample\FluentAdb.Sample.csproj", "{17B2DDE2-5930-4520-A6DC-4E049B9C5F83}"
 EndProject
@@ -37,5 +30,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {82C5B0D9-271A-4A3B-8666-223842EF765F}
 	EndGlobalSection
 EndGlobal
