@@ -38,7 +38,7 @@ namespace FluentAdb.Interfaces
         /// </summary>
         /// <param name="cancellationToken"></param>
         /// <returns>List of devices</returns>
-        Task<IEnumerable<IDeviceInfo>> GetDevices(CancellationToken cancellationToken = default(CancellationToken));
+        Task<IEnumerable<IDeviceInfo>> GetDevices(CancellationToken cancellationToken = default);
 
 
         Task<bool> ConnectWiFiDevice(IPAddress ipAdress, CancellationToken cancellationToken = default(CancellationToken));

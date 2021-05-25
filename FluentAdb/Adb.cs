@@ -189,15 +189,14 @@ namespace FluentAdb
             }
         }
 
-        public async Task<IEnumerable<IDeviceInfo>> GetDevices(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<IEnumerable<IDeviceInfo>> GetDevices(CancellationToken cancellationToken = default)
         {
             var lines = (await new Adb(this, "devices").RunAsync(cancellationToken: cancellationToken).ConfigureAwait(false)).ToLines().ToList();
-            if (!lines.Any())
+            if (lines.Count == 0)
             {
                 return new List<IDeviceInfo>();
             }
-            lines.RemoveRange(0, 1);
-            return lines.Select(l => new AdbDeviceInfo(l));
+            return lines.Where(entry => entry.Contains('\t')).Select(l => new AdbDeviceInfo(l));
         }
 
         public async Task<string> GetScreenshot(string file, CancellationToken cancellationToken = default(CancellationToken))
